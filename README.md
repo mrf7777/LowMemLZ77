@@ -1,37 +1,4 @@
 # LowMemLZ77
  A generic, flexible LZ77 algorithim with low memory systems in mind
 
-This C++ project is based on C++11, so there are no "concepts" as provided in C++20.
-However, this project has functions as declared in "lz77.h" which are templated and require type arguments with specific properties to compile.
-
-The goal is to abstract the idea of resources available to the compressor.
-Several other compressors force the input and output of their functions to reside in RAM or memory addressable by a pointer.
-This is not always feasible, especially on a memory-constrained system like arduino. A better solution is to let the programmer define how resources are read and written.
-
-If a function in this project has a template parameter named "RandomAccessible" then it must have the following method signatures:
-
-bool isValid(std::size_t index) const;  //tells if the index is valid or in range
-T get(std::size_t index) const;         //returns the contents at the index
-std::size_t getSize() const;            //returns the size of the resource or buffer
-
-...where T is a type. The type T is specified in another template parameter of the templated function.
-For example, the function lz77_getNextLDP requires two template arguments: RandomAccessible and Value.
-If you pass "unsigned int" into Value, then the type that you pass into RandomAccessible must
-    have a method with the signature "unsigned int get(std::size_t index) const;"
-This is put into place so that programmers who create their own classes to pass into RandomAccessible do not have
-to make their classes templated.
-
-If a function in this project has a template parameter named "Iterator" then it must have the following method signatures:
-
-bool hasNext() const;   //returns true if peek() or next() will return defined content. False otherwise
-T peek() const;         //returns the current content of the stream. This does not advance the iterator
-T next() const;         //returns the current content of the stream. This advances the iterator. Check hasNext() before calling again
-
-Where T is a type. Like classes that can quality as "RandomAccessible," any class that qualifies as an
-    argument for an "Iterator" template parameter will have an associated "Value" template parameter required at the calling site.
-
-If a function in this project has a template parameter named "RandomWritable" then it must have the following method signatures:
-
-bool isValid(std::size_t index) const;      //tells if the index is valid or in range
-bool set(std::size_t index, const T & data);    //if the index is valid, set the data in the resource at the index.
-std::size_t getSize() const;                //returns the size of the resource or buffer
+See the directory "docs" for usage and more information.

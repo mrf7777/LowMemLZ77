@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/ArrayResource.h
+cstdint
+-
+
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/Pair.h
+
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/Triple.h
+
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/lz77.h
+Triple.h
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/Triple.h
+Pair.h
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/Pair.h
+cstdint
+-
+
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/main.cpp
+iostream
+-
+string
+-
+cstring
+-
+cstdint
+-
+Triple.h
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/Triple.h
+lz77.h
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/lz77.h
+ArrayResource.h
+/cygdrive/c/Users/micry/OneDrive/Documents/CLion Projects/Custom Libraries/LowMemLZ77/ArrayResource.h
+

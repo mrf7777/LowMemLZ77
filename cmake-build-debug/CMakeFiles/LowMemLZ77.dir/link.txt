@@ -1,0 +1,1 @@
+C:/cygwin64/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/LowMemLZ77.dir/main.cpp.o  -o LowMemLZ77.exe -Wl,--out-implib,libLowMemLZ77.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
